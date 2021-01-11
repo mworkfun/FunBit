@@ -441,6 +441,8 @@ namespace funBit {
         }
 
         if (Dir == 0) {    
+            degree = Math.map(degree, 0, 90, 90, 0);
+
             // 50hz: 20,000 us
             let v_us = (degree * 1800 / 180 + 600) // 0.6 ~ 2.4
             let value = v_us * 4096 / 20000
@@ -466,6 +468,8 @@ namespace funBit {
             setPwm(14, 0, value);
         }
         if (Dir == 3) {    
+            degree = Math.map(degree, 0, 90, 90, 0);
+            
             // 50hz: 20,000 us
             let v_us = (degree * 1800 / 180 + 600) // 0.6 ~ 2.4
             let value = v_us * 4096 / 20000
